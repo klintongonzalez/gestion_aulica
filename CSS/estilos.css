@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --blanco: #DDDDDD;
+    --gris: #6A6A6A;
+    --degradado:linear-gradient(90, var(--gris),var(--blanco));
+    overflow-y: scroll;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--gris);
+    color: white;
+}
+
+html{
+    font-size: 62.4%;
+    overflow: hidden;
+}
+
+body{
+    background: whitesmoke;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--gris);
+    font-size: 1.7rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.heading{
+    text-align: center;
+    background: var(--gris);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 1.8rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2rem;
+    color: blueviolet
+}
+
+header .navbar a{
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    color: rgb(41, 37, 37);
+}
+
+header .navbar a:hover{
+    color: rgb(30, 231, 23);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 2.5rem;
+    color: blueviolet;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.present{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/map_fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.present .image img{
+    width: 30vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.present .content h3{
+    font-size: 3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.present .content h3 span{
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.present .content p{
+    font-size: 1.5rem;
+    color: #6A6A6A;
+    padding: 1rem 0;
+}
+
+.datosdct .caja-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.datosdct .caja-contenedor .caja{
+    flex: 1 1 30 rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.datosdct .caja-contenedor .caja img{
+    height: 15rem;
+}
+
+.datosdct .caja-contenedor .caja h3{
+    font-size: 2rem;
+    color: blueviolet;
+    padding-top: 1rem;
+}
+
+.datosdct .caja-contenedor .caja p{
+    font-size: 1.3rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 1.5 rem 0;
+        font-size: 1.5 rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+
+    .present{
+        flex-flow: column-reverse;
+    }
+
+    .present .image img{
+        width: 80%;
+    }
+
+    .present .content h3{
+        font-size: 3.6rem;
+    }
+
+    .present .content p{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}

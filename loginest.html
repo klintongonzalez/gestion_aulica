@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS PROPIO-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--CSS FUENTE DE LETRA-->
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <!--TOAST-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--JS PROPIO-->
+    <script src="JS/main.js" type="module"></script>
+    <!--TOAST JS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--ICONOS-->
+    <script src="https://kit.fontawesome.com/057bacff69.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Iniciar Sesión</span></div>
+        <form id="signines">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input id="usuario" placeholder="Correo Electrónico" type="email" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input id="password" type="password" placeholder="Contraseña" required>
+          </div>
+          <div class="row button">
+            <input id="ingreso" type="submit" value="Ingresar" readonly>
+          </div>
+          <div id="back">
+            <a href="./index.html" type="submit" value="Página principal" readonly>Página Principal</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

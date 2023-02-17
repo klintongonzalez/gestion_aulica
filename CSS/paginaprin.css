@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Muli';
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+#botones{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 2px solid rgb(0,218,186);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(2,20,68);
+    text-decoration: none;
+    margin: 5px;
+
+}
+#botones:hover{
+    background-color: rgb(67, 116, 248);
+
+}
+.mapa-responsivo{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+}
+.mapa-responsivo iframe{
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+    
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(181, 127, 231); }
+
+header{
+    background-color: rgb(0,20,68);
+    
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(201, 201, 201);
+}
+
+header a:hover{
+    color: rgb(255, 0, 0);
+}
+#principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgb(2,20,68),
+        rgba(0, 160, 253, 0.555)
+    )
+    ,url("../img/principal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#carrusel
+    {
+        margin: 0;
+        padding: 0;
+        font-family: lato;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 50px;
+    }
+    
+    .slider-frame {
+        width: 1280px;
+        height: auto;
+        margin:50px auto 0;
+        overflow: hidden;
+    }
+    
+    .slider-frame ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        
+        animation: slide 20s infinite alternate ease-in-out;
+    }
+    
+    .slider-frame li {
+        width: 100%;
+        list-style: none;
+    }
+    
+    .slider-frame img {
+        width: 100%;
+    }
+    
+    @keyframes slide {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+        
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }
+    
+#principal h1{
+    color: white;
+}
+
+#principal button{
+    font-size: 1.75em;
+}
+
+#institucion .container{
+    text-align: justify;
+    padding: 200px 12px;
+    
+}
+
+#vimi{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#vimi .container{
+    padding: 150px 12px;
+}
+
+#vimi h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#vimi p{
+    display: none;
+}
+
+#vimi .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgb(2,20,68),
+        rgba(0, 160, 253, 0.555)
+    )
+    ,url("../img/front-end.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgb(2,20,68),
+        rgba(0, 160, 253, 0.555)
+    )
+    ,url("../img/full-stack.jpg");
+}
+
+
+#informa .container{
+    text-align: center;
+    padding: 150px 12px;
+}
+
+#informa li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+footer{
+    background-color: rgb(2,20,68);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(180, 180, 180);
+}
+
+footer .container{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #principal h1{
+        font-size: 5em;
+    }
+
+    #institucion .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #institucion .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #institucion h2{
+        margin-top: 0px;
+    }
+
+    #institucion .img-container{
+        background-image: url("../img/somos-proya.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #vimi .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #vimi p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #vimi h2{
+        font-size: 4em;
+    }
+
+    #vimi h3{
+        margin-top: 0;
+    }
+
+    #vimi .carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(63, 63, 63);
+        box-shadow: 2px 2px 10px rgba(0, 218, 185, 0.644);
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgb(2,20,68),
+            rgba(0, 160, 253, 0.555)
+        )
+        ,url("../img/front-end-cropped.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgb(2,20,68),
+            rgba(0, 160, 253, 0.555)
+        )
+        ,url("../img/full-stack-cropped.jpg");
+    }
+
+    #informa{
+        background-image: url("../img/background-2.jpeg");
+        background-repeat: no-repeat;
+        background-size: 445px 380px;
+        background-position: calc(100vw - 500px) 120px;
+        box-shadow: 2px 2px 10px rgba(0, 218, 185, 0.644);
+    }
+
+    #informa .container{
+        text-align: initial;
+    }
+
+    #informa ul{
+        margin-left: 100px;
+    }
+
+    footer .container{
+        justify-content: center; 
+    }
+}
